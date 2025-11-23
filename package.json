@@ -11,7 +11,8 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@iconify/iconify": "^3.1.1",
+    "@iconify/utils": "^3.0.2",
+    "iconify-icon": "^3.0.2",
     "vue": "^3.5.24"
   },
   "devDependencies": {

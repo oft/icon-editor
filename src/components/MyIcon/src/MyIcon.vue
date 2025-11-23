@@ -4,7 +4,8 @@
 
 <script setup lang="ts">
 import appEditor from './my.json'
-import { addCollection,renderHTML,renderIcon } from '@iconify/iconify'
+import { addCollection,getIcon } from 'iconify-icon'
+import { iconToHTML,iconToSVG } from '@iconify/utils'
 
 const props = withDefaults(defineProps<{
     icon:string
@@ -12,7 +13,11 @@ const props = withDefaults(defineProps<{
 
 addCollection(appEditor)
 
-const svg = computed(()=>renderHTML(props.icon))
+const svg = computed(()=>{
+    const icons = getIcon(props.icon)!
+    const result = iconToSVG(icons)
+    return iconToHTML(result.body,result.attributes)
+})
 
 
 </script>

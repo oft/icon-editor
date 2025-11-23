@@ -35,7 +35,7 @@ export default async () => {
       cleanupSVG(svg);
       await parseColors(svg, {
         defaultColor: 'currentColor',
-        callback: (attr, colorStr, color) => {
+        callback: (_attr, colorStr, color) => {
           return !color || isEmptyColor(color)
             ? colorStr
             : 'currentColor';

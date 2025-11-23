@@ -15,7 +15,11 @@ export default defineConfig({
     watchDirCommand({
       watch:resolvePath('./scripts/svgs'),
       // command:'pnpm run build:icon',
-      callback:()=>buildIcon(),
+      callback:()=>{
+        
+        console.log('change')
+        return buildIcon()
+      },
     }),
     unocss(),
     vue(),
