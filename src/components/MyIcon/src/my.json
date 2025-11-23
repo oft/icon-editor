@@ -1,0 +1,16 @@
+{
+	"prefix": "my",
+	"lastModified": 1763918320,
+	"icons": {
+		"circle": {
+			"body": "<circle r=\"49\" fill=\"currentColor\" stroke=\"currentColor\" stroke-width=\"2\"/>",
+			"left": -50,
+			"top": -50
+		},
+		"rect": {
+			"body": "<path fill=\"currentColor\" stroke=\"currentColor\" d=\"M0 0h99v99H0z\"/>"
+		}
+	},
+	"width": 100,
+	"height": 100
+}

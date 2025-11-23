@@ -1,0 +1,37 @@
+{
+  "name": "icon-editor",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "build:icon": "tsx scripts/build-icon.ts",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@iconify/iconify": "^3.1.1",
+    "vue": "^3.5.24"
+  },
+  "devDependencies": {
+    "@iconify/tools": "^4.1.4",
+    "@types/node": "^24.10.1",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.8.1",
+    "chokidar": "^4.0.3",
+    "tsx": "^4.20.6",
+    "typescript": "~5.9.3",
+    "unocss": "^66.5.9",
+    "unplugin-auto-import": "^20.2.0",
+    "unplugin-vue-components": "^30.0.0",
+    "vite": "npm:rolldown-vite@7.2.5",
+    "vitest": "^4.0.13",
+    "vue-tsc": "^3.1.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@7.2.5"
+    }
+  }
+}
