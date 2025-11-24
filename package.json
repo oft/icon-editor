@@ -8,6 +8,7 @@
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "build:icon": "tsx scripts/build-icon.ts",
+    "build:png": "tsx scripts/test-svg2png.ts",
     "test": "vitest"
   },
   "dependencies": {
@@ -21,6 +22,8 @@
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.8.1",
     "chokidar": "^4.0.3",
+    "puppeteer": "^24.31.0",
+    "sharp": "^0.34.5",
     "tsx": "^4.20.6",
     "typescript": "~5.9.3",
     "unocss": "^66.5.9",
