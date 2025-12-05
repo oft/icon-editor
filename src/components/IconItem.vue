@@ -14,8 +14,8 @@
     </button>
     
     <div class="flex-1 flex items-center justify-center w-full h-full">
-      <iconify-icon :icon="item.key"></iconify-icon>
-      <!-- <svg 
+      <!-- <iconify-icon :icon="item.key"></iconify-icon> -->
+      <svg 
         v-if="visible"
         xmlns="http://www.w3.org/2000/svg" 
         aria-hidden="true" 
@@ -32,7 +32,7 @@
           maxHeight: '80px'
         }"
         class="transition-all duration-200 hover:scale-110 text-gray-600 dark:text-gray-300 flex-shrink-0"
-      ></svg> -->
+      ></svg>
     </div>
     <span class="text-xs text-gray-600 text-center overflow-hidden text-ellipsis whitespace-nowrap max-w-full px-1 dark:text-gray-400 mt-1">{{ item.key }}</span>
   </div>
