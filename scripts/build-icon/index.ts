@@ -1,6 +1,6 @@
 import { lookupCollection } from '@iconify/json'
-import type { IconifyJSON, IconifyIcon } from '@iconify/types'
-import { getIconData, getIcons, iconToHTML, iconToSVG } from '@iconify/utils'
+import type { IconifyJSON } from '@iconify/types'
+import { getIconData, iconToHTML, iconToSVG } from '@iconify/utils'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import sharp from 'sharp';
@@ -72,7 +72,7 @@ const buildIcons = async () => {
     if (typeof color === 'string') { styles['color'] = color }
 
 
-    const svgstr = iconToHTML(result.body, {
+    const svgstr = iconToHTML(body, {
       ...result.attributes,
       ...attrs,
       ...others,

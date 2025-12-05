@@ -19,7 +19,7 @@ export interface PurgeIconsOptions {
   // format?: OutputFormat
 }
 
-export async function PurgeIcons(options: PurgeIconsOptions = {}) {
+export async function PurgeIcons(_options: PurgeIconsOptions = {}) {
   // const icons = await Extract(options)
   // const code = await CodeGen([...icons, ...(options.included || [])], options)
   return //code

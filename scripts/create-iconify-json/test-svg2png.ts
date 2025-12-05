@@ -7,7 +7,7 @@ const root = path.join(__dirname, 'svgs');
 sharp(path.join(root, 'rect.svg'))
     .resize(200)
     .png()
-    .toFile(path.join(__dirname, 'output.png'), (err, info) => {
+    .toFile(path.join(__dirname, 'output.png'), (err, _info) => {
         if (err) console.error(err);
     });
 

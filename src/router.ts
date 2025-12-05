@@ -1,8 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Layout from './components/Layout.vue'
-import HomeView from './views/HomeView.vue'
-import IconsView from './views/IconsView.vue'
-import AboutView from './views/AboutView.vue'
 import 'virtual:uno.css'
 
 const router = createRouter({
@@ -15,18 +12,18 @@ const router = createRouter({
         {
           path: '',
           name: 'home',
-          component: HomeView
+          component: ()=>import( './views/HomeView.vue')
         },
         {
           path: 'icons/:collectionName?',
           name: 'icons',
-          component: IconsView,
+          component: ()=>import( './views/IconsView.vue'),
           props: true
         },
         {
           path: 'about',
           name: 'about',
-          component: AboutView
+          component: ()=>import( './views/AboutView.vue')
         }
       ]
     }

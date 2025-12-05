@@ -26,7 +26,6 @@
     "vite.config.ts",
     "uno.config.ts",
     "test/**/*.ts",
-    "plugins/**/*.ts",
     "scripts/**/*.ts"
   ]
 }
