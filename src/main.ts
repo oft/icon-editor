@@ -1,6 +1,11 @@
 import { createApp } from 'vue'
-import 'virtual:uno.css';
 import './style.css'
 import App from './App.vue'
+import './dev'
+import router from './router'
+import "iconify-icon"
 
-createApp(App).mount('#app')
+
+const app = createApp(App)
+app.use(router)
+app.mount('#app')

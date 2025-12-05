@@ -1,37 +1,29 @@
 import { defineConfig } from 'vite'
-import Components from 'unplugin-vue-components/vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import unocss from 'unocss/vite'
 import vue from '@vitejs/plugin-vue'
-import { resolve } from 'node:path'
-import watchDirCommand from './plugins/vite-icon-build'
-import buildIcon from './scripts/build'
+import UnoCSS from 'unocss/vite'
 
-const resolvePath = (dir: string) => resolve(import.meta.dirname, dir)
+///@ts-ignore
+import PurgeIcons from 'vite-plugin-purge-icons'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    watchDirCommand({
-      watch:resolvePath('./scripts/svgs'),
-      // command:'pnpm run build:icon',
-      callback:()=>{
-        
-        console.log('change')
-        return buildIcon()
-      },
+    vue({
+      template: {
+        compilerOptions: {
+          // Exclude custom elements from Vue component resolution
+          // Syntax: (tag: string) => boolean
+          isCustomElement: (tag) => {
+            // Example 1: Match specific custom elements (e.g., <iconify-icon>, <my-svg>)
+            return tag === 'iconify-icon';
+            
+            // Example 2: Match all custom elements (tags with hyphens, per web component spec)
+            // return tag.includes('-'); 
+          }
+        }
+      }
     }),
-    unocss(),
-    vue(),
-    Components({
-      dts: resolvePath('./types/components.d.ts'),
-    }),
-    AutoImport({
-      dts: resolvePath('./types/auto-imports.d.ts'),
-      imports: [
-        'vue'
-      ],
-    })
+    PurgeIcons(),
+    UnoCSS(),
   ],
-
 })

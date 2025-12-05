@@ -10,7 +10,7 @@ const __dirname = import.meta.dirname;
 /**svg 目录*/
 const root = path.join(__dirname, 'svgs');
 /**输出图标集合*/
-const out = path.join(__dirname, '../src/components/MyIcon/src');
+const out = path.join(__dirname, '../../src/components/MyIcon/src');
 export default async () => {
   // Import icons
   const iconSet = await importDirectory(root, {

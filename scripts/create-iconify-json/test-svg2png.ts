@@ -11,7 +11,7 @@ sharp(path.join(root, 'rect.svg'))
         if (err) console.error(err);
     });
 
-
+// puppeteer 使用浏览器截屏的方式
 async function svgToPng(svg:string) {
     const puppeteer = await import("puppeteer");
     const browser = await puppeteer.launch();

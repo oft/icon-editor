@@ -1,0 +1,56 @@
+const icons:(string|{
+    icon:string
+    alias?:string
+    width?:number
+    height?:number
+    color?:string
+    style?:Record<string,string>
+    svgAttrs?:Record<string,string>
+})[] = [
+    {
+        icon:'material-icon-theme:word',
+        width:48,
+        height:48,
+    },
+    {
+        icon:'fa7-solid:file-excel',
+        color:'green',
+        width:48,
+        height:48,
+    },
+    {
+        icon:'vscode-icons:file-type-powerpoint2',
+        width:48,
+        height:48,
+    },
+    {
+        icon:'material-icon-theme:pdf',
+        width:48,
+        height:48,
+    },
+    {
+        icon:'mdi:file',
+        color:'#1588f4',
+        width:48,
+        height:48,
+    },
+    {
+        icon:'majesticons:article-line',
+        color:'#1588f4',
+        width:48,
+        height:48,
+    },
+    {
+        icon:'streamline-flex-color:zip-folder-flat',
+        color:'#1588f4',
+        width:48,
+        height:48,
+    },
+    {
+        icon:'material-symbols-light:download',
+        width:24,
+        height:24,
+    },
+] 
+
+export default icons

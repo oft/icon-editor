@@ -7,9 +7,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-types/auto-imports.d.ts
-types/components.d.ts
-
 node_modules
 dist
 dist-ssr
